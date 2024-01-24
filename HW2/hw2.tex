@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% \usepackage{indentfirst}
+
+\title{MATH 2600--Problem Set 2}
+\author{Daniel Park}
+
+\begin{document}
+\maketitle
+
+\section{Reduced Row Echelon Form Uniqueness}
+Let \(A\) denote an arbitrary matrix. Then, the Reduced Row Echelon form (RREF) of \(A\) is unique. That is, after performing some elementary row operations on \(A\), there exists no two different matrices that both represent the RREF of \(A\).\newline
+Assume two matrices, call them \(P\) and \(Q\), represent the RREF of \(A\). By definition, both \(P\) and \(Q\) then have the same solutions as each other and \(A\) if they represent augmented matrices of a system. This implies that by performing some elementary row operations on \(P\), we can compute \(Q\).\newline
+Call \(P_i\) and \(Q_i\) the \(i\)-th row of \(P\) and \(Q\). Then, \(P_1\) and \(Q_1\) must be non-zero, since zero rows must be below non-zero rows. Say that the pivot entry of \(P_1\) is at column \(j\), call this \(P_{1j}\), and the pivot entry of \(Q_1\) is at column \(k\), call this \(Q_{1k}\). If \(j = k - 1\), then it would no longer be possible to perform elementary row operations on \(P\) to get to \(Q\) due to the 0 at \(P_{1k}\) or \(Q_{1j}\), implying that \(P\) is \textit{not} row-equivalent to \(Q\). In general, \(j \nless k\), and similarly, \(j \ngtr k\) for the same reason. Thus, \(j = k\); or the pivot column of \(P_1\) and \(Q_1\) must be equal.\newline
+We can apply this same logic to the rest of the rows. That is, the pivot column of \(P_i\) must be equal to that of \(Q_i\). 
+\section{Equal Reduced Row Echelon Forms}
+\indent please stop
+
+
+\end{document}
