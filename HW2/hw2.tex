@@ -6,7 +6,7 @@
 
 % Set page size and margins
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
 \usepackage{amsmath}
@@ -25,10 +25,48 @@
 Let \(A\) denote an arbitrary matrix. Then, the Reduced Row Echelon form (RREF) of \(A\) is unique. That is, after performing some elementary row operations on \(A\), there exists no two different matrices that both represent the RREF of \(A\).\\[10pt]
 Assume two matrices, \(P\) and \(Q\), represent the RREF of \(A\). By definition, both \(P\) and \(Q\) have the same solutions as each other and \(A\) if they represent augmented matrices of a system. This implies that by performing elementary row operations on \(P\), we can compute \(Q\).\\[10pt]
 Call \(P_i\) and \(Q_i\) the \(i\)-th row of \(P\) and \(Q\). Then, \(P_1\) and \(Q_1\) must be non-zero, since zero rows must be below non-zero rows. Say that the pivot entry of \(P_1\) is at column \(j\), call this \(P_{1j}\), and the pivot entry of \(Q_1\) is at column \(k\), call this \(Q_{1k}\). If \(j = k - 1\), then it would no longer be possible to perform elementary row operations on \(P\) to get to \(Q\) due to the 0 at \(P_{1k}\) or \(Q_{1j}\), implying that \(P\) is \textit{not} row-equivalent to \(Q\). In general, \(j \nless k\), and similarly, \(j \ngtr k\) for the same reason. Thus, \(j = k\); the pivot columns of \(P_1\) and \(Q_1\) must be equal.\\[10pt]
-We can apply this same logic to the rest of the rows. That is, the pivot column of \(P_i\) must be equal to that of \(Q_i\). Earlier, we established that by performing elementary row operations, we can get from \(P\) to \(Q\). And since every pivot entry of \(P\) and \(Q\) are equal and in the same column, the \(i\)-th row of \(P\) is simply the \(i\)-th row of \(Q\) multiplied by the constant 1. Therefore, \(P = Q\), and no two \textit{different} matrices can represent the RREF of an arbitrary matrix. $\blacksquare$
+We can apply this same logic to the rest of the rows. That is, the pivot column of \(P_i\) must be equal to that of \(Q_i\). Earlier, we established that by performing elementary row operations, we can get from \(P\) to \(Q\). And since every pivot entry of \(P\) and \(Q\) are equal and in the same column, the \(i\)-th row of \(P\) is simply the \(i\)-th row of \(Q\) multiplied by the constant 1. Therefore, \(P = Q\), and no two \textit{different} matrices can represent the RREF of an arbitrary matrix. $\blacksquare$\pagebreak
 
 \section{Equal Reduced Row Echelon Forms}
-\indent please stop
-
+Let \(A\) and \(B\) be two matrices that have the same RREF \(R\). It is possible to transform \(A\) into \(B\) by performing a sequence of elementary row operations.\\[10pt]
+By performing \(i\) elementary row operations on \(A\), we can obtain \(R\). By performing \(j\) elementary row operations on \(B\), we can also obtain \(R\). That is,
+\[
+    (O_1, O_2, \ldots, O_{i - 1}, O_{i})(A) = R
+\]
+\[
+    (P_1, P_2, \ldots, P_{j - 1}, P_{j})(B) = R
+\]
+Therefore,
+\[
+    (O_1, O_2, \ldots, O_{i - 1}, O_{i})(A) = (P_1, P_2, \ldots, P_{j - 1}, P_{j})(B) = R
+\]
+For all \(O_1, \ldots, O_i\) and \(P_1, \ldots, P_j\), there exists \(O_1^{-1}, \ldots, O_i^{-1}\) and \(P_1^{-1}, \ldots, P_j^{-1}\) respectively, that reverse their original elementary row operation.\\[10pt]
+There are just 3 elementary row operations possible on any matrix \(M\). Let \(M_i\) be the \(i\)-th row of \(M\) and \(M_j\) the \(j\)-th of \(M\). If \(E_1, E_2, E_3\) are\dots
+\begin{enumerate}
+    \item switching \(M_i\) with \(M_j\)
+    \item adding a multiple \(c\) of \(M_j\) to \(M_i\) (that is, \(M_i + c * M_j\))
+    \item multiplying \(M_i\) by some non-zero constant \(k\)
+\end{enumerate}
+then the elementary row operations \(E_1^{-1}, E_2^{-1}, E_3^{-1}\) represent\dots
+\begin{enumerate}
+    \item switching \(M_i\) with \(M_j\) again
+    \item adding the negated multiple \(c\) of \(M_j\) to \(M_i\) (that is, \(M_i - c * M_j\))
+    \item multiplying \(M_i\) by the constant \(\frac{1}{k}\)
+\end{enumerate}
+respectively. This implies that\dots
+\[
+    (E_1^{-1}, E_2^{-1}, E_3^{-1})[(E_1, E_2, E_3)(M)] = M
+\]
+Applying this logic to \(A\) and \(B\)\dots
+\[
+    (O_1, \ldots, O_{i})(A) = (P_1, \ldots, P_{j})(B)
+\]
+\[
+    (P_1^{-1}, \ldots, P_{j}^{-1})[(O_1, \ldots, O_{i})(A)] = (P_1^{-1}, \ldots, P_{j}^{-1})[(P_1, \ldots, P_{j})(B)]
+\]
+\[
+    (P_1^{-1}, \ldots, P_{j}^{-1})[(O_1, \ldots, O_{i})(A)] = B
+\]
+\((P_1^{-1}, \ldots, P_{j}^{-1})\) and \((O_1, \ldots, O_{i})\) are all elementary row operations on A, and we are able to transform \(A\) to \(B\). $\blacksquare$
 
 \end{document}
