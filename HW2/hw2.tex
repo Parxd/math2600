@@ -29,7 +29,7 @@ We can apply this same logic to the rest of the rows. That is, the pivot column 
 
 \section{Equal Reduced Row Echelon Forms}
 Let \(A\) and \(B\) be two matrices that have the same RREF \(R\). It is possible to transform \(A\) into \(B\) by performing a sequence of elementary row operations.\\[10pt]
-By performing \(i\) elementary row operations on \(A\), we can obtain \(R\). By performing \(j\) elementary row operations on \(B\), we can also obtain \(R\). That is,
+By performing \(i\) elementary row operations on \(A\), we can obtain \(R\). By performing \(j\) elementary row operations on \(B\), we can also obtain \(R\). Let \(O_i\) and \(P_j\) represent the \(i\)-th and \(j\)-th elementary row operation on \(A\) and \(B\) respectively. Then,
 \[
     (O_1, O_2, \ldots, O_{i - 1}, O_{i})(A) = R
 \]
@@ -47,7 +47,7 @@ There are just 3 elementary row operations possible on any matrix \(M\). Let \(M
     \item adding a multiple \(c\) of \(M_j\) to \(M_i\) (that is, \(M_i + c * M_j\))
     \item multiplying \(M_i\) by some non-zero constant \(k\)
 \end{enumerate}
-then the elementary row operations \(E_1^{-1}, E_2^{-1}, E_3^{-1}\) represent\dots
+then let the elementary row operations \(E_1^{-1}, E_2^{-1}, E_3^{-1}\) represent\dots
 \begin{enumerate}
     \item switching \(M_i\) with \(M_j\) again
     \item adding the negated multiple \(c\) of \(M_j\) to \(M_i\) (that is, \(M_i - c * M_j\))
@@ -55,18 +55,18 @@ then the elementary row operations \(E_1^{-1}, E_2^{-1}, E_3^{-1}\) represent\do
 \end{enumerate}
 respectively. This implies that\dots
 \[
-    (E_1^{-1}, E_2^{-1}, E_3^{-1})[(E_1, E_2, E_3)(M)] = M
+    (E_3^{-1}, E_2^{-1}, E_1^{-1})[(E_1, E_2, E_3)(M)] = M
 \]
 Applying this logic to \(A\) and \(B\)\dots
 \[
     (O_1, \ldots, O_{i})(A) = (P_1, \ldots, P_{j})(B)
 \]
 \[
-    (P_1^{-1}, \ldots, P_{j}^{-1})[(O_1, \ldots, O_{i})(A)] = (P_1^{-1}, \ldots, P_{j}^{-1})[(P_1, \ldots, P_{j})(B)]
+    (P_j^{-1}, \ldots, P_{1}^{-1})[(O_1, \ldots, O_{i})(A)] = (P_j^{-1}, \ldots, P_{1}^{-1})[(P_1, \ldots, P_{j})(B)]
 \]
 \[
-    (P_1^{-1}, \ldots, P_{j}^{-1})[(O_1, \ldots, O_{i})(A)] = B
+    (P_j^{-1}, \ldots, P_1^{-1})[(O_1, \ldots, O_{i})(A)] = B
 \]
-\((P_1^{-1}, \ldots, P_{j}^{-1})\) and \((O_1, \ldots, O_{i})\) are all elementary row operations on A, and we are able to transform \(A\) to \(B\). $\blacksquare$
+\((P_j^{-1}, \ldots, P_{1}^{-1})\) and \((O_1, \ldots, O_{i})\) are elementary row operations on A, and we can transform \(A\) to \(B\). $\blacksquare$
 
 \end{document}
