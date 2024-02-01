@@ -285,13 +285,603 @@ Since \(C = (I - AB)^{-1}\), \(C^{-1} = (I - AB)\), because \(I - AB\) is assume
 \]
 Thus, the inverse of \(I - BA\) is given by \(I + B(I - AB)^{-1}A\). $\blacksquare$ \pagebreak
 
-\section*{6.}
-\subsection*{6a.}
-\subsection*{6b.}
-\subsection*{6e.}
+\section*{6. Finding inverses}
+\subsection*{6a. \(A = 
+    \begin{bmatrix}
+        1 & 1 & 1 \\
+        1 & -1 & 1 \\
+        0 & 0 & 1
+    \end{bmatrix}
+    \)}
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 1 & 1 & 1 & 0 & 0 \\
+        1 & -1 & 1 & 0 & 1 & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-R_1) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & -2 & 0 & -1 & 1 & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 1 & 1 & 1 & 0 & 0 \\
+        0 & -2 & 0 & -1 & 1 & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \frac{R_2}{-2} =
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 1 & 0 & \frac{-1}{-2} & \frac{1}{-2} & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 1 & 1 & 1 & 0 & 0 \\
+        0 & 1 & 0 & \frac{1}{2} & -\frac{1}{2} & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (-R_2) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & 1 & \frac{1}{2} & \frac{1}{2} & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & 1 & \frac{1}{2} & \frac{1}{2} & 0 \\
+        0 & 1 & 0 & \frac{1}{2} & -\frac{1}{2} & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (-R_3) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & 0 & \frac{1}{2} & \frac{1}{2} & -1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & 0 & \frac{1}{2} & \frac{1}{2} & -1 \\
+        0 & 1 & 0 & \frac{1}{2} & -\frac{1}{2} & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[A^{-1} = 
+    \begin{bmatrix}
+        \frac{1}{2} & \frac{1}{2} & -1 \\
+        \frac{1}{2} & -\frac{1}{2} & 0 \\
+        0 & 0 & 1
+    \end{bmatrix}
+\]\pagebreak
 
-\section*{7.}
-\subsection*{7a.}
-\subsection*{7b.}
+\subsection*{6b. B = \(
+    \begin{bmatrix}
+        1 & 2 & -2 \\
+        1 & 5 & 3 \\
+        2 & 6 & -1
+    \end{bmatrix}
+    \)}
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        1 & 5 & 3 & 0 & 1 & 0 \\
+        2 & 6 & -1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-R_1) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 3 & 5 & -1 & 1 & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 3 & 5 & -1 & 1 & 0 \\
+        2 & 6 & -1 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_3 + (-2R_1) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 2 & 3 & -2 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 3 & 5 & -1 & 1 & 0 \\
+        0 & 2 & 3 & -2 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \frac{R_2}{3} = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 1 & \frac{5}{3} & \frac{-1}{3} & \frac{1}{3} & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 1 & \frac{5}{3} & -\frac{1}{3} & \frac{1}{3} & 0 \\
+        0 & 2 & 3 & -2 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_3 + (-2R_2) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 0 & \frac{-1}{3} & \frac{-4}{3} & \frac{-2}{3} & 1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 2 & -2 & 1 & 0 & 0 \\
+        0 & 1 & \frac{5}{3} & -\frac{1}{3} & \frac{1}{3} & 0 \\
+        0 & 0 & -\frac{1}{3} & -\frac{4}{3} & -\frac{2}{3} & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (-2R_2) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & \frac{-16}{3} & \frac{5}{3} & \frac{-2}{3} & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & -\frac{16}{3} & \frac{5}{3} & -\frac{2}{3} & 0 \\
+        0 & 1 & \frac{5}{3} & -\frac{1}{3} & \frac{1}{3} & 0 \\
+        0 & 0 & -\frac{1}{3} & -\frac{4}{3} & -\frac{2}{3} & 1
+    \end{array}
+    \right]
+\]
+\[
+    -3R_3 = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 0 & 1 & 4 & 2 & -3
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & -\frac{16}{3} & \frac{5}{3} & -\frac{2}{3} & 0 \\
+        0 & 1 & \frac{5}{3} & -\frac{1}{3} & \frac{1}{3} & 0 \\
+        0 & 0 & 1 & 4 & 2 & -3
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-\frac{5}{3}R_3) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 1 & 0 & -\frac{21}{3} & -\frac{9}{3} & 5
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & -\frac{16}{3} & \frac{5}{3} & -\frac{2}{3} & 0 \\
+        0 & 1 & 0 & -7 & -3 & 5 \\
+        0 & 0 & 1 & 4 & 2 & -3
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (\frac{16}{3}R_3) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & 0 & \frac{69}{3} & \frac{30}{3} & \frac{-48}{3}
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & 0 & 0 & 23 & 10 & -16 \\
+        0 & 1 & 0 & -7 & -3 & 5 \\
+        0 & 0 & 1 & 4 & 2 & -3
+    \end{array}
+    \right]
+\]
+\[
+    B^{-1} = \begin{bmatrix}
+        23 & 10 & -16 \\
+        -7 & -3 & 5 \\
+        4 & 2 & -3
+    \end{bmatrix}
+\]
+
+\subsection*{6e. C = \(
+    \begin{bmatrix}
+        1 & a & b + c \\
+        1 & b & a + c \\
+        1 & c & a + b
+    \end{bmatrix}
+    \)}
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & a & b + c & 1 & 0 & 0 \\
+        1 & b & a + c & 0 & 1 & 0\\
+        1 & c & a + b & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-R_1) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & b - a & a - b & -1 & 1 & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & a & b + c & 1 & 0 & 0 \\
+        0 & b - a & a - b & -1 & 1 & 0\\
+        1 & c & a + b & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_3 + (-R_1) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & c - a & a - c & -1 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & a & b + c & 1 & 0 & 0 \\
+        0 & b - a & a - b & -1 & 1 & 0\\
+        0 & c - a & a - c & -1 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \frac{R_2}{b - a} = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 1 & \frac{a - b}{b - a} & \frac{-1}{b - a} & \frac{1}{b - a} & 0
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & a & b + c & 1 & 0 & 0 \\
+        0 & 1 & -1 & \frac{1}{a - b} & -\frac{1}{a - b} & 0\\
+        0 & c - a & a - c & -1 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    R_3 + -((c - a)R_2) = 
+    \left[
+    \begin{array}{ccc|ccc}
+        0 & 0 & 0 & \frac{b - c}{a - b} & \frac{c - a}{a - b} & 1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{ccc|ccc}
+        1 & a & b + c & 1 & 0 & 0 \\
+        0 & 1 & -1 & \frac{1}{a - b} & -\frac{1}{a - b} & 0\\
+        0 & 0 & 0 & \frac{b - c}{a - b} & \frac{c - a}{a - b} & 1
+    \end{array}
+    \right]
+\]
+Since \(R_3\) has no pivot variable, we cannot turn the variables above it (namely \(b + c\) and \(-1\)) to 0 to reduce it to RREF. Thus, the inverse does not exist.\pagebreak
+
+\section*{7. Using inverses to solve systems}
+\subsection*{7a. Inverse of \(
+    \begin{pmatrix}
+        2 & 5 & 8 & 5 \\
+        1 & 2 & 3 & 1 \\
+        2 & 4 & 7 & 2 \\
+        1 & 3 & 5 & 3
+    \end{pmatrix}
+    \)}
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        2 & 5 & 8 & 5 & 1 & 0 & 0 & 0 \\
+        1 & 2 & 3 & 1 & 0 & 1 & 0 & 0 \\
+        2 & 4 & 7 & 2 & 0 & 0 & 1 & 0 \\
+        1 & 3 & 5 & 3 & 0 & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \frac{R_1}{2} = 
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & \frac{5}{2} & \frac{1}{2} & 0 & 0 & 0
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-R_1) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & -\frac{1}{2} & -1 & -\frac{3}{2} & -\frac{1}{2} & 1 & 0 & 0
+    \end{array}
+    \right]
+\]
+\[
+    R_3 + (-2R_1) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & -1 & -1 & -3 & -1 & 0 & 1 & 0
+    \end{array}
+    \right]
+\]
+\[
+    R_4 + (-R_1) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & \frac{1}{2} & 1 & \frac{1}{2} & -\frac{1}{2} & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & \frac{5}{2} & \frac{1}{2} & 0 & 0 & 0 \\
+        0 & -\frac{1}{2} & -1 & -\frac{3}{2} & -\frac{1}{2} & 1 & 0 & 0 \\
+        0 & -1 & -1 & -3 & -1 & 0 & 1 & 0 \\
+        0 & \frac{1}{2} & 1 & \frac{1}{2} & -\frac{1}{2} & 0 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    -2R_2 = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & 1 & 2 & 3 & 1 & -2 & 0 & 0
+    \end{array}
+    \right]
+\]
+\[
+    R_3 + R_2 = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0
+    \end{array}
+    \right]
+\]
+\[
+    R_4 + (-\frac{R_2}{2}) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & 0 & 0 & -1 & -1 & 1 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & \frac{5}{2} & \frac{1}{2} & 0 & 0 & 0 \\
+        0 & 1 & 2 & 3 & 1 & -2 & 0 & 0 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & -1 & -1 & 1 & 0 & 1
+    \end{array}
+    \right]
+\]
+\[
+    -R_4 = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & \frac{5}{2} & \frac{1}{2} & 0 & 0 & 0 \\
+        0 & 1 & 2 & 3 & 1 & -2 & 0 & 0 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-3R_4) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & 1 & 2 & 0 & -2 & 1 & 0 & 3
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & \frac{5}{2} & \frac{1}{2} & 0 & 0 & 0 \\
+        0 & 1 & 2 & 0 & -2 & 1 & 0 & 3 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (-\frac{5}{2}R_4) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & 0 & -2 & \frac{5}{2} & 0 & \frac{5}{2}
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & 0 & -2 & \frac{5}{2} & 0 & \frac{5}{2} \\
+        0 & 1 & 2 & 0 & -2 & 1 & 0 & 3 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+\[
+    R_2 + (-2R_3) = 
+    \left[
+    \begin{array}{cccc|cccc}
+        0 & 1 & 0 & 0 & -2 & 5 & -2 & 3
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 4 & 0 & -2 & \frac{5}{2} & 0 & \frac{5}{2} \\
+        0 & 1 & 0 & 0 & -2 & 5 & -2 & 3 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (-4R_3) =
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 0 & 0 & -2 & \frac{21}{2} & -4 & \frac{5}{2}
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & \frac{5}{2} & 0 & 0 & -2 & \frac{21}{2} & -4 & \frac{5}{2} \\
+        0 & 1 & 0 & 0 & -2 & 5 & -2 & 3 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+\[
+    R_1 + (-\frac{5}{2}R_2) =
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & 0 & 0 & 0 & 3 & -2 & 1 & -5
+    \end{array}
+    \right]
+\]
+\[
+    \left[
+    \begin{array}{cccc|cccc}
+        1 & 0 & 0 & 0 & 3 & -2 & 1 & -5 \\
+        0 & 1 & 0 & 0 & -2 & 5 & -2 & 3 \\
+        0 & 0 & 1 & 0 & 0 & -2 & 1 & 0 \\
+        0 & 0 & 0 & 1 & 1 & -1 & 0 & -1
+    \end{array}
+    \right]
+\]
+The inverse is \(
+    \begin{bmatrix}
+        3 & -2 & 1 & -5 \\
+        -2 & 5 & -2 & 3 \\
+        0 & -2 & 1 & 0 \\
+        1 & -1 & 0 & -1
+    \end{bmatrix}\).
+
+\subsection*{7b. Solve system of equations}
+\(Ax = b\), where \(A = \begin{pmatrix}
+                            2 & 5 & 8 & 5 \\
+                            1 & 2 & 3 & 1 \\
+                            2 & 4 & 7 & 2 \\
+                            1 & 3 & 5 & 3
+                        \end{pmatrix}\),
+                    \(x = \begin{pmatrix}
+                           x_1 \\
+                           x_2 \\
+                           x_3 \\
+                           x_4 
+                        \end{pmatrix}\),
+                    \(b = \begin{pmatrix}
+                        0 \\
+                        1 \\
+                        0 \\
+                        1 
+                     \end{pmatrix}\).\newline
+We can solve for \(x\) by solving for \(A^{-1}b\).
+\[
+    A^{-1} =
+    \begin{pmatrix}
+        3 & -2 & 1 & -5 \\
+        -2 & 5 & -2 & 3 \\
+        0 & -2 & 1 & 0 \\
+        1 & -1 & 0 & -1
+    \end{pmatrix}
+\]
+\[
+    A^{-1}b = 
+    \begin{pmatrix}
+        3(0) + -2(1) + 1(0) + -5(1) \\
+        -2(0) + 5(1) + -2(0) + 3(1) \\
+        0(0) + -2(1) + 1(0) + 0(1) \\
+        1(0) + -1(1) + 0(0) + -1(1)
+    \end{pmatrix}
+\]
+\[
+    x = A^{-1}b = 
+    \begin{pmatrix}
+        -7 \\
+        8 \\
+        -2 \\
+        -2
+    \end{pmatrix}
+\]
+
 
 \end{document}

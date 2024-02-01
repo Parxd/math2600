@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% \usepackage{indentfirst}
+
+\title{MATH 2600--2/1 Notes}
+\author{Daniel Park}
+
+\begin{document}
+\maketitle
+
+\section*{Determinants}
+\begin{itemize}
+    \item Applies for square matrices
+    \[
+        \det\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix} = ad - bc = 0
+    \]
+
+    \item If \(\det(A) \neq 0\), \(A\) is invertible.
+    \item If \(A^{-1} = M = \frac{1}{ad - bc}
+    \begin{pmatrix}
+        d & -b \\
+        -c & a
+    \end{pmatrix}
+    \), then \(AM = I_n\)
+    
+    \item Say \(A =
+    \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix}\) is not invertible \(\rightarrow \det(A) = 0\).
+    \begin{enumerate}
+        \item \(a = 0\)
+        \item \(c = 0\) and \(b = 0\)
+        \item \(d = 0\)
+        \item None are zero
+    \end{enumerate}
+\end{itemize}
+
+\end{document}
