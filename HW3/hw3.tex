@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% \usepackage{indentfirst}
+
+\title{MATH 2600--Problem Set 3}
+\author{Daniel Park}
+
+\begin{document}
+\maketitle
+
+\section*{1. All Possible Products}
+A is of shape \(3 \times 2\), B is of shape \(2 \times 4\), C is of shape \(4 \times 3\), and D is of shape \(3 \times 3\). Thus, the possible products are: \(AB\), \(BC\), \(CD\), \(DA\), \(CA\).
+\[
+    AB = \begin{pmatrix}
+        2(1) + 5(9) & 2(7) + 5(2) & 2(2) + 5(7) & 2(9) + 5(1) \\
+        1(1) + 4(9) & 1(7) + 4(2) & 1(2) + 4(7) & 1(9) + 4(1) \\
+        2(1) + 1(9) & 2(7) + 1(2) & 2(2) + 1(7) & 2(9) + 1(1)
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        47 & 24 & 39 & 23 \\
+        37 & 15 & 30 & 13 \\
+        11 & 16 & 11 & 19
+    \end{pmatrix}
+\]
+\[
+    BC = \begin{pmatrix}
+        [1(1) + 7(2) + 2(1) + 9(3)] & [1(0) + 7(1) + 2(1) + 9(2)] & [1(4) + 7(3) + 2(5) + 9(1)] \\
+        [9(1) + 2(2) + 7(1) + 1(3)] & [9(0) + 2(1) + 7(1) + 1(2)] & [9(4) + 2(3) + 7(5) + 1(1)] 
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        44 & 27 & 44 \\
+        23 & 11 & 78 
+    \end{pmatrix}
+\]
+\[
+    CD = \begin{pmatrix}
+        [1(1) + 0(2) + 4(1)] & [1(0) + 0(1) + 4(3)] & [1(7) + 0(2) + 4(0)] \\
+        [2(1) + 1(2) + 3(1)] & [2(0) + 1(1) + 3(3)] & [2(7) + 1(2) + 3(0)] \\
+        [1(1) + 1(2) + 5(1)] & [1(0) + 1(1) + 5(3)] & [1(7) + 1(2) + 5(0)] \\
+        [3(1) + 2(2) + 1(1)] & [3(0) + 2(1) + 1(3)] & [3(7) + 2(2) + 1(0)] 
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        5 & 12 & 7 \\
+        7 & 10 & 16 \\
+        8 & 16 & 9 \\
+        8 & 5 & 25
+    \end{pmatrix}
+\]
+\[
+    DA = \begin{pmatrix}
+        [1(2) + 0(1) + 7(2)] & [1(5) + 0(4) + 7(1)] \\
+        [2(2) + 1(1) + 2(2)] & [2(5) + 1(4) + 2(1)] \\
+        [1(2) + 3(1) + 0(2)] & [1(5) + 3(4) + 0(1)]
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        16 & 12 \\
+        9 & 16 \\
+        5 & 17
+    \end{pmatrix}
+\]
+\[
+    CA = \begin{pmatrix}
+        [1(2) + 0(1) + 4(2)] & [1(5) + 0(4) + 4(1)] \\
+        [2(2) + 1(1) + 3(2)] & [2(5) + 1(4) + 3(1)] \\
+        [1(2) + 1(1) + 5(2)] & [1(5) + 1(4) + 5(1)] \\
+        [3(2) + 2(1) + 1(2)] & [3(5) + 2(4) + 1(1)]  
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        10 & 9 \\
+        11 & 17 \\
+        13 & 14 \\
+        10 & 24
+    \end{pmatrix}
+\]
+
+\section*{2. \(AB\) vs. \(BA\)}
+
+\subsection*{2b. A = \(
+    \begin{pmatrix}
+        1 & -1 & 5 \\
+        3 & 0 & 4
+    \end{pmatrix}
+    \), B = \(
+        \begin{pmatrix}
+            2 & 1 \\
+            3 & 6 \\
+            1 & 5
+        \end{pmatrix}\)}
+A is of shape \(2 \times 3\) and B is of shape \(3 \times 2\). Both \(AB\) and \(BA\) are thus defined. \(AB\) is of shape \(2 \times 2\) and \(BA\) is of shape \(3 \times 3\), so they do not have the same number of rows and columns.
+
+\subsection*{2d. A = \(
+    \begin{pmatrix}
+        3 & 1 & -4 \\
+        -2 & 0 & 5 \\
+        1 & -2 & 3
+    \end{pmatrix}
+    \), B = \(
+        \begin{pmatrix}
+            2 & 0 & 0 \\
+            0 & 5 & 0 \\
+            0 & 0 & -1
+        \end{pmatrix}\)}
+A is of shape \(3 \times 3\) and B is of shape \(3 \times 3\). Both \(AB\) and \(BA\) are thus defined. \(AB\) is of shape \(3 \times 3\) and \(BA\) is of shape \(3 \times 3\), so they \textit{do} have the same number of rows and columns.
+
+\[
+    AB = \begin{pmatrix}
+        [3(2) + 1(0) + -4(0)] & [3(0) + 1(5) + -4(0)] & [3(0) + 1(0) + -4(-1)] \\
+        [-2(2) + 0(0) + 5(0)] & [-2(0) + 0(5) + 5(0)] & [-2(0) + 0(0) + 5(-1)]\\
+        [1(2) + -2(0) + 3(0)] & [1(0) + -2(5) + 3(0)] & [1(0) + -2(0) + 3(-1)]
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        6 & 5 & 4 \\
+        -4 & 0 & -5 \\
+        2 & -10 & -3
+    \end{pmatrix}
+\]
+Since both \(A\) and \(B\) are square matrices and \(AB \neq I_3\), \(B \neq A^{-1}\), and thus \(BA\) is not going to equal to \(AB\). To check\dots
+\[
+    BA = \begin{pmatrix}
+        [2(3) + 0(-2) + 0(1)] & [2(1) + 0(0) + 0(-2)] & [2(-4) + 0(5) + 0(3)] \\
+        [0(3) + 5(-2) + 0(1)] & [0(1) + 5(0) + 0(-2)] & [0(-4) + 5(5) + 0(3)] \\
+        [0(3) + 0(-2) + -1(1)] & [0(1) + 0(0) + -1(-2)] & [0(-4) + 0(5) + -1(3)]
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        6 & 2 & -8 \\
+        -10 & 0 & 25 \\
+        -1 & 2 & -3
+    \end{pmatrix}
+\]
+Indeed, \(AB \neq BA\).\pagebreak
+
+\section*{3. \(A =
+    \begin{pmatrix}
+        2 & -5 \\
+        3 & 1
+    \end{pmatrix}
+    \)
+    }
+
+\subsection*{3a. Evaluate \(A^2\)}
+\[
+    A^2 = \begin{pmatrix}
+            [2(2) + -5(3)] & [2(-5) + -5(1)] \\
+            [3(2) + 1(3)] & [3(-5) + 1(1)]
+    \end{pmatrix}
+\]
+\[
+    = \begin{pmatrix}
+        -11 & -15 \\
+        9 & -14
+    \end{pmatrix}
+\]
+
+\subsection*{3b. \(\alpha\), \(\beta\), \(\gamma\)}
+Find \(\alpha\), \(\beta\), \(\gamma\) \(\in \mathbb{R}\), such that \(\alpha I + \beta A + \gamma A^2\) = \textbf{0} and \(\alpha\), \(\beta\), \(\gamma\) not all 0.
+\[
+    \alpha I_2 + \beta A + \gamma A^2 = \textbf{0}
+\]
+\[
+    \begin{pmatrix}
+        \alpha & 0 \\
+        0 & \alpha
+    \end{pmatrix} + 
+    \begin{pmatrix}
+        2\beta & -5\beta \\
+        3\beta & \beta
+    \end{pmatrix} +
+    \begin{pmatrix}
+        -11\gamma & 15\gamma \\
+        9\gamma & -14\gamma
+    \end{pmatrix} = 
+    \begin{pmatrix}
+        0 & 0 \\
+        0 & 0
+    \end{pmatrix}
+\]
+\[
+    \begin{pmatrix}
+        \alpha + 2\beta - 11\gamma & -5\beta + 15\gamma \\
+        3\beta + 9\gamma & \alpha + \beta - 14\gamma
+    \end{pmatrix} = 
+    \begin{pmatrix}
+        0 & 0 \\
+        0 & 0
+    \end{pmatrix}
+\]
+\[
+    \alpha + 2\beta - 11\gamma = 0
+\]
+\[
+    -5\beta + 15\gamma = 0
+\]
+\[
+    3\beta + 9\gamma = 0
+\]
+\[
+    \alpha + \beta - 14\gamma = 0
+\]
+From the 2nd and 3rd equations, solving for \(\gamma\)\dots
+\[
+    \beta = -3\gamma
+\]
+Plugging that into the 4th equation\dots
+\[
+    \alpha - 17\gamma = 0
+\]
+\[
+    \alpha = 17\gamma
+\]
+\[
+    \gamma = \gamma
+\]
+There are infinitely many solutions. If not all zero, one solution is \(\alpha = 17\), \(\beta = -3\), \(\gamma = 1\). \pagebreak
+
+\section*{5. Proof}
+If \(A\) and \(B\) are matrices s.t. \(I - AB\) is invertible, then the inverse of \(I - BA\) is given by the formula \((I - BA)^{-1} = I + B(I - AB)^{-1}A\).\hfill\break
+Let's denote \(C\) as \((I - AB)^{-1}\). Then,
+\[
+    (I - BA)^{-1} = I + BCA
+\]
+\[
+    (I - BA)(I - BA)^{-1} = (I - BA)(I + BCA)
+\]
+We will prove that \((I - BA)(I + BCA) = I\), since \((I - BA)(I - BA)^{-1} = I\).
+\[
+    (I - BA)(I + BCA) = I
+\]
+\[
+    I^2 + IBCA - BAI + BABCA = I
+\]
+\[
+    I + BCA - BA + BABCA = I
+\]
+\[
+    I + B(C - I - ABC)A = I
+\]
+\[
+    I + B(C - ABC - I)A = I
+\]
+\[
+    I + B[(I - AB)C - I]A = I
+\]
+Since \(C = (I - AB)^{-1}\), \(C^{-1} = (I - AB)\), because \(I - AB\) is assumed to be invertible.
+\[
+    I + B(C^{-1}C - I)A = I
+\]
+\[
+    I + B(I - I)A = I
+\]
+\[
+    I + B\textbf{0}A = I
+\]
+\[
+    I + \textbf{0} = I
+\]
+\[
+    I = I
+\]
+Thus, the inverse of \(I - BA\) is given by \(I + B(I - AB)^{-1}A\). $\blacksquare$ \pagebreak
+
+\section*{6.}
+\subsection*{6a.}
+\subsection*{6b.}
+\subsection*{6e.}
+
+\section*{7.}
+\subsection*{7a.}
+\subsection*{7b.}
+
+\end{document}
